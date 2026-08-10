@@ -1,0 +1,45 @@
+export const TRANSACTION_TYPES = [
+  {
+    id: "credit",
+    label: "Credit",
+    icon: "arrow-up",
+    activeBg: "bg-emerald-600",
+    activeText: "text-white",
+    iconColor: "text-emerald-400 bg-emerald-500/10",
+    flex: "flex-1",
+  },
+  {
+    id: "debit",
+    label: "Debit",
+    icon: "arrow-down",
+    activeBg: "bg-rose-600",
+    activeText: "text-white",
+    iconColor: "text-rose-400 bg-rose-500/10",
+    flex: "flex-1",
+  },
+  {
+    id: "transfer",
+    label: "Self-Transfer",
+    icon: "sync",
+    activeBg: "bg-sky-600",
+    activeText: "text-white",
+    iconColor: "text-sky-400 bg-sky-500/10",
+    flex: "flex-[1.5]",
+  },
+];
+
+export const AVAILABLE_ICONS = [
+  "gift",
+  "cart",
+  "car",
+  "subway",
+  "home",
+  "heart",
+  "shirt",
+  "book",
+  "construct",
+  "wine",
+  "cafe",
+  "fitness",
+  "airplane",
+];

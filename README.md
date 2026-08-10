@@ -1,50 +1,126 @@
-# Welcome to your Expo app 👋
+<div align="center">
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# 💰 MyPaisa
 
-## Get started
+### Personal Finance & Expense Tracker
 
-1. Install dependencies
+A modern, high-performance personal finance app built with **React Native**, **Expo SDK 54**, **Expo Router v6**, and **NativeWind v5** — track income, expenses, and inter-bank transfers with real-time balances, rich analytics, and offline-first storage.
 
-   ```bash
-   npm install
-   ```
+[![Expo](https://img.shields.io/badge/Expo-SDK%2054-000020?style=flat-square&logo=expo&logoColor=white)](https://expo.dev)
+[![React Native](https://img.shields.io/badge/React%20Native-0.81.5-61DAFB?style=flat-square&logo=react&logoColor=black)](https://reactnative.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](#-license)
 
-2. Start the app
+</div>
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🌟 Key Features
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+|                              |                                                                                                                                                       |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🏦 **Multi-Bank Accounts**   | Create and track separate bank accounts, set a primary account, and monitor individual + aggregated net balances.                                     |
+| 💸 **Transaction Tracking**  | Log **Credits**, **Debits**, and **Self-Transfers** between your own accounts with automatic net-zero balance adjustments.                            |
+| 📊 **Interactive Analytics** | Line charts via `react-native-gifted-charts`, filterable by Weekly / Monthly / Yearly / Custom ranges, with account-level and inflow/outflow toggles. |
+| 📑 **Grouped Ledger**        | Date-grouped transaction log (Today, Yesterday, specific dates) with search and type/account filters.                                                 |
+| 🏷️ **Custom Categories**     | Personalize categories with custom names and icons from `@expo/vector-icons`.                                                                         |
+| 💾 **Offline-First**         | Instant local persistence via `zustand` + `@react-native-async-storage/async-storage`.                                                                |
+| ⚡ **New Architecture**      | Fabric & TurboModules enabled, React 19, typed routes, and experimental React Compiler support.                                                       |
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🛠️ Tech Stack
 
-When you're ready, run:
+| Category        | Technology                                                                                              | Purpose                                                  |
+| :-------------- | :------------------------------------------------------------------------------------------------------ | :------------------------------------------------------- |
+| **Framework**   | [Expo SDK 54](https://expo.dev)                                                                         | Native app framework, New Architecture enabled           |
+| **Core**        | [React Native 0.81.5](https://reactnative.dev) / [React 19.1.0](https://react.dev)                      | Cross-platform runtime                                   |
+| **Routing**     | [Expo Router v6](https://docs.expo.dev/router/introduction/)                                            | File-based routing with typed routes                     |
+| **Styling**     | [NativeWind v5](https://www.nativewind.dev/) + [Tailwind CSS v4](https://tailwindcss.com/)              | Utility-first styling for native primitives              |
+| **State**       | [Zustand v5](https://zustand-demo.pmnd.rs/)                                                             | Lightweight state management with persistence middleware |
+| **Persistence** | [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)                             | Local key-value device storage                           |
+| **Charts**      | [react-native-gifted-charts](https://github.com/Abhinandan-Kushwaha/react-native-gifted-charts)         | SVG-based line & bar charts                              |
+| **Icons**       | [@expo/vector-icons](https://icons.expo.fyi/)                                                           | Ionicons vector icon set                                 |
+| **Date Picker** | [@react-native-community/datetimepicker](https://github.com/react-native-datetimepicker/datetimepicker) | Native date/time selection                               |
 
-```bash
-npm run reset-project
+---
+
+## 📁 Project Architecture
+
+```text
+MyPaisa/
+│
+├── app/
+│   ├── (tabs)/
+│   │   ├── _layout.tsx         # Bottom tab navigation setup
+│   │   ├── index.tsx           # Home dashboard view
+│   │   ├── report.tsx          # Reports & analytics view
+│   │   ├── add.tsx             # Add transaction shortcut tab
+│   │   ├── ledger.tsx          # Complete transaction ledger
+│   │   └── profile.tsx         # User profile & preferences
+│   │
+│   ├── _layout.tsx             # Root navigation layout
+│   └── addTransaction.tsx      # Modal view for creating a transaction
+│
+├── assets/
+│   ├── images/                 # App imagery & branding
+│   └── icons/                  # Custom UI icons
+│
+├── constants/
+│   └── AddTransactions.ts      # Transaction metadata, categories & icons
+│
+├── store/
+│   └── useFinanceStore.ts      # Global finance and transaction state
+│
+├── app.json                    # Expo configuration & app manifest
+├── global.css                  # Global Tailwind CSS styles
+├── metro.config.js             # Metro bundler + NativeWind configuration
+├── package.json                # Project dependencies & npm scripts
+└── tsconfig.json               # TypeScript configuration
+
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+State is managed centrally in `useFinanceStore` (banks, transactions, categories) with computed helpers like `getBalance()`, `getNetBalance()`, and `getTodayStats()`.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🚀 Getting Started
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Prerequisites
 
-## Join the community
+- **Node.js** v18.x or higher
+- **npm** / **yarn** / **pnpm**
+- **Expo Go** app (iOS/Android) or a configured Simulator/Emulator
 
-Join our community of developers creating universal apps.
+### Installation
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+cd MyPaisa
+npm install
+```
+
+### Run the App
+
+```bash
+npx expo start
+```
+
+| Platform | Command           |
+| :------- | :---------------- |
+| Android  | `npm run android` |
+| iOS      | `npm run ios`     |
+| Web      | `npm run web`     |
+
+---
+
+## 📜 NPM Scripts
+
+| Script            | Command            | Purpose                  |
+| :---------------- | :----------------- | :----------------------- |
+| `npm start`       | `expo start`       | Start the Metro bundler  |
+| `npm run android` | `expo run:android` | Build & run on Android   |
+| `npm run ios`     | `expo run:ios`     | Build & run on iOS       |
+| `npm run web`     | `expo start --web` | Start the web dev server |
+| `npm run lint`    | `expo lint`        | Run ESLint checks        |
+
+---

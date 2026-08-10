@@ -1,0 +1,44 @@
+:root {
+  /* --- Core Background & Surface Colors --- */
+  --color-backdrop-dim: rgba(0, 0, 0, 0.4); /* bg-black/40 */
+  --color-surface-dark: #181717; /* bg-[#181717] */
+  --color-surface-black: #000000; /* bg-[#000000] */
+
+  /* --- App Accents & Highlights --- */
+  --color-brand-emerald: #10b981; /* text-[#10b981] */
+  --color-primary-green: #059669; /* bg-emerald-600 */
+  --color-active-sky: #0284c7; /* bg-sky-600 */
+
+  /* --- Semantic Category Colors (BG / Text pairs) --- */
+  --color-salary-bg: #d1fae5;
+  --color-salary-text: #10b981;
+
+  --color-food-bg: #ffedd5;
+  --color-food-text: #ea580c;
+
+  --color-shopping-bg: #fce7f3;
+  --color-shopping-text: #db2777;
+
+  --color-entertainment-bg: #fee2e2;
+  --color-entertainment-text: #dc2626;
+
+  --color-fuel-bg: #dbeafe;
+  --color-fuel-text: #2563eb;
+
+  --color-bills-bg: #f3e8ff;
+  --color-bills-text: #9333ea;
+
+  --color-medical-bg: #ffe4e6;
+  --color-medical-text: #e11d48;
+
+  --color-debit-bg: #dcfce7;
+  --color-debit-text: #16a34a;
+
+  --color-slate-bg: #f1f5f9;
+  --color-slate-text: #475569;
+
+  /* --- Neutral Elements & Borders --- */
+  --color-neutral-light: #f8fafc; /* bg-slate-50 / bg-slate-100 */
+  --color-text-muted: #64748b; /* text-slate-500 / text-[#62748e] */
+  --color-border-dark: #475569; /* border-slate-600 / border-slate-700 */
+}
