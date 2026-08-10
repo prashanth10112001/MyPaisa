@@ -124,3 +124,21 @@ npx expo start
 | `npm run lint`    | `expo lint`        | Run ESLint checks        |
 
 ---
+
+## 📱 Screenshots
+
+<p align="center">
+  <img src="assets/screenshots/home.jpg" width="180" alt="Home">
+  <img src="assets/screenshots/reports.jpg" width="180" alt="Reports">
+  <img src="assets/screenshots/add-transaction.jpg" width="180" alt="Add Transaction">
+  <img src="assets/screenshots/ledger.jpg" width="180" alt="Ledger">
+  <img src="assets/screenshots/profile.jpg" width="180" alt="Profile">
+</p>
+
+<p align="center">
+  <b>Home</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Reports</b>&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Add</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Ledger</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Profile</b>
+</p>
